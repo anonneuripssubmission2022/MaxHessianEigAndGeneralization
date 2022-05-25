@@ -5,7 +5,7 @@ This repository is the official implementation of the NeurIPS 2022 submission **
 ## Preliminaries
 Run the following command to install the requirements:
 ```setup
-pip install -r requirements.txt
+pip install -r src/requirements.txt
 ```
 Next, set the `DATASETS` and `RESULTS` environments to the directories where the datasets and results will be stored, respectively (e.g., `export DATASET="/home/userID/datasets"`).
 
