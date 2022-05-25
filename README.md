@@ -35,7 +35,7 @@ ${RESULTS}/cifar10/arch_vgg11_no_dropout/ce/sgd/no_change_lr/lr_0.1_bs_100_0
 
 The following files are created inside this output directory:
 - `train_loss`, `test_loss`, `train_acc`, `test_acc`: the train and test losses and accuracies (recorded after each epoch)
-- `leading_eigenvalues/leading_eigenvalue_final`: the maximum Hessian eigenvalue (calculated at the final iterate; for BN networks trained at small learning rates, this is calculated between iterates)
+- `leading_eigenvalues/leading_eigenvalue_final`: the maximum Hessian eigenvalue (calculated at the final iterate; for batch-normalized networks trained at small learning rates, this is calculated between iterates)
 
 ## Evaluation
 
@@ -72,5 +72,5 @@ The optional arguments of `src/train.py` and `src/eval.py` are
 - `physical_batch_size` [int, defaults to `1000`]: the maximum number of examples that we try to fit on the GPU at once
 - `abridged_size` [int, defaults to `1000`]: when computing the maximum Hessian eigenvalue, use an abridged dataset of this size
 - `disable_dropout` [bool, defaults to `False`]: `True` when computing the maximum Hessian eigenvalue using a network with dropout layers (`False` otherwise)
-- `between_iterates` [bool, defaults to `False`]: `True` when computing the maximum Hessian eigenvalue between iterates (only used for BN networks trained with small learning rates)
+- `between_iterates` [bool, defaults to `False`]: `True` when computing the maximum Hessian eigenvalue between iterates (only used for batch-normalized networks trained with small learning rates)
 - `save_freq`: [int, defaults to `10`]: the frequency at which we save results
