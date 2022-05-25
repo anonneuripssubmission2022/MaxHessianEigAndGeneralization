@@ -23,7 +23,7 @@ train.py [dataset] [arch_id] [batch_size] [lr]
 ```
 
 
-For example, running the command below trains a VGG11 (no batch-normalization, no dropout) on CIFAR-10 using cross-entropy loss, batch size 100, and learning rate 0.01. Training terminates once the train accuracy reaches 99%:
+For example, running the command below trains a VGG11 (no batch-normalization, no dropout) on CIFAR-10 via minibatch-SGD using cross-entropy loss, batch size 100, and learning rate 0.01. Training terminates once the train accuracy reaches 99%:
 ```setup
 python src/train.py 'cifar10' 'vgg11_no_dropout' 100 1e-1 --loss='ce'
 ```
