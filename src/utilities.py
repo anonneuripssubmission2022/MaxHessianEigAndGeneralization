@@ -239,7 +239,7 @@ def interpolate_state_dicts(state_dict_1, state_dict_2, weight):
     """ Interpolate between model state dicts """
     return {key: (1 - weight) * state_dict_1[key] + weight * state_dict_2[key] for key in state_dict_1.keys()}
 
-def get_hessian_leading_eigenvalue_between_iterates(network: nn.Module, directory, loss_fn, batch_size, dataset, num_interpolations = 3, disable_dropout=False, gpu_batch_size=DEFAULT_PHYS_BATCH_SIZE):
+def get_hessian_leading_eigenvalue_between_iterates(network: nn.Module, directory, loss_fn, batch_size, dataset, num_interpolations = 8, disable_dropout=False, gpu_batch_size=DEFAULT_PHYS_BATCH_SIZE):
     """ Compute the leading Hessian eigenvalue between iterates"""
     state_dict_1 = torch.load(f"{directory}/snapshot_final")
     state_dict_2 = torch.load(f"{directory}/snapshot_extra_iter")
