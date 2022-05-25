@@ -253,8 +253,6 @@ def get_hessian_leading_eigenvalue_between_iterates(network: nn.Module, director
         
         leading_eigs_at_interpolations[i] = get_hessian_leading_eigenvalue_at_iterate(network, loss_fn, batch_size, dataset, disable_dropout=disable_dropout, gpu_batch_size=gpu_batch_size)
     
-    print(weights)
-    print(leading_eigs_at_interpolations)    
     return max(leading_eigs_at_interpolations)
         
 
