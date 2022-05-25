@@ -1,1 +1,5 @@
-
+# the following packages work with Python 3.7.10
+numpy==1.18.1
+scipy==1.6.2
+torch==1.8.1
+torchvision==0.9.1
